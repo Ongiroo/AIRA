@@ -24,6 +24,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\lib\metisMenu\dist\jquery.metisMenu.js" />
+    <None Include="wwwroot\lib\metisMenu\dist\jquery.metisMenu.min.js" />
+    <None Include="wwwroot\lib\metisMenu\dist\metisMenu.js" />
+    <None Include="wwwroot\lib\metisMenu\dist\metisMenu.min.js" />
+    <None Include="wwwroot\lib\metisMenu\Gruntfile.js" />
+    <None Include="wwwroot\lib\metisMenu\LICENSE" />
+    <None Include="wwwroot\lib\metisMenu\README.md" />
+    <None Include="wwwroot\lib\metisMenu\src\metisMenu.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AIRA.Class\AIRA.Class.csproj" />
   </ItemGroup>
 
