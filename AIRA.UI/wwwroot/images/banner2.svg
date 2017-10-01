@@ -1,0 +1,18 @@
+<svg width="1140" height="360" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m1,0l1140,0l0,360l-1140,0l0,-360z" fill="#56B4D9"/>
+  <path id="svg_4" d="m121.5,50.950012" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#56B4D9"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_6" y2="116.950017" x2="438.499995" y1="33.950012" x1="437.499995" stroke-opacity="null" stroke-width="null" stroke="null" fill="none"/>
+  <rect id="svg_8" height="90" width="1" y="41.950012" x="486.500004" fill-opacity="null" stroke-width="null" stroke="#ffffff" fill="none"/>
+  <path id="svg_9" d="m218.5,540.950012l-18.5,-44.950012" opacity="0.5" fill-opacity="null" stroke-width="null" stroke="#ffffff" fill="none"/>
+  <path id="svg_10" d="m58.5,471.950012l139.5,-30.950012" opacity="0.5" fill-opacity="null" stroke-width="null" stroke="#ffffff" fill="none"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'League Gothic', sans-serif" font-size="43" id="svg_12" y="101.950012" x="163.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#ffffff">Robo-Advisor</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'League Gothic', sans-serif" font-size="43" id="svg_13" y="101.950012" x="561.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#ffffff">Machine Learning</text>
+ </g>
+</svg>

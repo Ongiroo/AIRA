@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<hgroup class="dtr-title">
+    <h2>@ViewBag.Title.</h2>
+    <h2>@Model.Name</h2>
+</hgroup>
+<address>
+    ...<br />
+    Location: @Model.Location<br />
+    <abbr title="Mobile">M:</abbr>
+    @Model.Phone
+</address>

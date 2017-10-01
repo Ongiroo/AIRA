@@ -1,0 +1,31 @@
+<svg width="1140" height="360" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="svg_29_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m0,0l1140,0l0,360l-1140,0l0,-360z" fill="#68217A"/>
+  <rect id="svg_24" height="74" width="1" fill="#fff" y="61" x="548.5"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_26" y="98.950012" x="650.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#000000"/>
+  <text filter="url(#svg_29_blur)" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_29" y="106" x="121.40834" stroke-width="0" stroke="#FFE7A2" fill="#FFF5FF">Artificial Intelligence Risk Analytics</text>
+  <path id="svg_30" d="m131.5,94.950012" opacity="0.5" fill-opacity="null" stroke-width="null" stroke="#FFE7A2" fill="#68217A"/>
+  <path id="svg_32" d="m86.5,84.950012" opacity="0.5" fill-opacity="null" stroke-width="null" stroke="#FFE7A2" fill="#68217A"/>
+  <path id="svg_34" d="m19.5,287.950012" opacity="0.5" stroke-opacity="null" stroke-width="null" stroke="#FFE7A2" fill="#ffffff"/>
+  <rect transform="rotate(-12.0322, 641, 97.45)" id="svg_35" height="47.515402" width="50.592518" y="73.692312" x="615.703739" stroke-opacity="null" stroke-width="null" stroke="#FFE7A2" fill="#FFDFB8"/>
+  <rect transform="rotate(40.4564, 747, 98.45)" id="svg_37" height="47.515402" width="50.592518" y="74.692312" x="721.703739" stroke-opacity="null" stroke-width="null" stroke="#FFE7A2" fill="#7AD6CA"/>
+  <rect transform="rotate(120.002, 856, 100.45)" id="svg_38" height="47.515402" width="50.592518" y="76.692312" x="830.703739" stroke-opacity="null" stroke-width="null" stroke="#FFE7A2" fill="#FFFA8D"/>
+  <path id="svg_39" d="m-25.5,516.950012" opacity="0.5" stroke-opacity="null" stroke-width="null" stroke="#FFE7A2" fill="#7AD6CA"/>
+  <path id="svg_40" d="m197.5,562.950012" opacity="0.5" stroke-opacity="null" stroke-width="null" stroke="#FFE7A2" fill="#FFDFB8"/>
+  <ellipse ry="18.499999" rx="24.5" id="svg_42" cy="68.450013" cx="651" stroke-opacity="null" stroke-width="null" stroke="null" fill="#306856"/>
+  <path id="svg_43" d="m125.5,517.950012" opacity="0.5" stroke-opacity="null" stroke-width="null" stroke="null" fill="#306856"/>
+  <ellipse ry="18.499999" rx="24.5" id="svg_44" cy="112.450013" cx="766" stroke-opacity="null" stroke-width="null" stroke="null" fill="#845335"/>
+  <ellipse ry="18.499999" rx="24.5" id="svg_45" cy="75.450013" cx="876" stroke-opacity="null" stroke-width="null" stroke="null" fill="#CC7C65"/>
+  <path id="svg_46" d="m760.5,110.950012" opacity="0.5" stroke-opacity="null" stroke-width="null" stroke="null" fill="#CC7C65"/>
+ </g>
+</svg>

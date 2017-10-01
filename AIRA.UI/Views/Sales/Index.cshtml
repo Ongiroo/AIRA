@@ -1,0 +1,86 @@
+﻿@model AIRA.UI.Models.Contact
+
+@{
+    ViewData["Title"] = "Contact";
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="risk,risk management,risk management software,hedge fund risk,hedge fund risk management,risk analysis,risk analysis software,risk analysis program,risk analysis service,financial risk analysis,financial risk management,financial risk management software,financial risk manager,hedge fund risk,hedge fund risk management,hedge risk,investment risk management,portfolio risk management,portfolio risk management software,risk,risk analysis,risk management finance,risk management model,risk management program,risk management software,stock risk, options risk,options risk analysis,options risk management,derivatives risk management, market risk, market risk management, market risk analysis,stock market risk analysis,VAR,value at risk,value at risk software,volatility,correlation,exposure,exposure analysis,var software" />
+
+<h2>Contact Sales</h2>
+
+<h4>Thank you for your interest in AIRA. Please complete the form below so we can better assist you.</h4>
+<h4>A salesperson will contact you shortly.</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Contact">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="JobTitle" title="I would like more information on:" class="control-label"></label>
+                <input asp-for="JobTitle" class="form-control" />
+                <span asp-validation-for="JobTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrganisationName" class="control-label"></label>
+                <input asp-for="OrganisationName" class="form-control" />
+                <span asp-validation-for="OrganisationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StateZip" class="control-label"></label>
+                <input asp-for="StateZip" class="form-control" />
+                <span asp-validation-for="StateZip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HowHearUs" class="control-label"></label>
+                <input asp-for="HowHearUs" class="form-control" />
+                <span asp-validation-for="HowHearUs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
