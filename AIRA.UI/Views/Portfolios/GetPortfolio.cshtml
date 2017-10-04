@@ -1,0 +1,43 @@
+﻿@model Tuple<IEnumerable<AIRA.UI.Models.Portfolio>, List<AIRA.UI.Models.Industry>>
+    @using AIRA.UI.Models
+@addTagHelper *, AIRA.UI
+@{
+        ViewData["Title"] = "Index";
+        Layout = "~/Views/Shared/_PortfolioLayout.cshtml";
+    }
+<h2>GetPortfolio</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.ReturnAttribution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.RiskAttribution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.Title)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model.Item2)
+{
+            <tr>
+                <td>
+                    <select asp-for="Item2" class="form-control" asp-items="@Html.GetEnumSelectList<Industry>()" />
+                    <span asp-validation-for="Item2" class="text-danger"/>                
+                  @*@Html.DropDownListFor(modelItem => item.Sector, @Html.GetEnumSelectList<Industry>))*@
+                </td>                
+            </tr>
+        }
+    </tbody>
+</table>

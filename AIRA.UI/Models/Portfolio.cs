@@ -16,6 +16,7 @@ namespace AIRA.UI.Models
         [Required]
         [StringLength(255)]
         public string Title { get; set; }
+        [EnumDataType(typeof(Industry))]
         public Industry Sector { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_PortfolioLayout.cshtml";
 }
 
 <h2>Create</h2>
@@ -13,29 +14,29 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label asp-for="@Model.Name" class="control-label"></label>
+                <input asp-for="@Model.Name" class="form-control" />
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ReturnAttribution" class="control-label"></label>
-                <input asp-for="ReturnAttribution" class="form-control" />
-                <span asp-validation-for="ReturnAttribution" class="text-danger"></span>
+                <label asp-for="@Model.ReturnAttribution" class="control-label"></label>
+                <input asp-for="@Model.ReturnAttribution" class="form-control" />
+                <span asp-validation-for="@Model.ReturnAttribution" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="RiskAttribution" class="control-label"></label>
-                <input asp-for="RiskAttribution" class="form-control" />
-                <span asp-validation-for="RiskAttribution" class="text-danger"></span>
+                <label asp-for="@Model.RiskAttribution" class="control-label"></label>
+                <input asp-for="@Model.RiskAttribution" class="form-control" />
+                <span asp-validation-for="@Model.RiskAttribution" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <label asp-for="@Model.Title" class="control-label"></label>
+                <input asp-for="@Model.Title" class="form-control" />
+                <span asp-validation-for="@Model.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Sector" class="control-label"></label>
-                <select asp-for="Sector" class="form-control"></select>
-                <span asp-validation-for="Sector" class="text-danger"></span>
+                <label asp-for="@Model.Sector" class="control-label"></label>
+                <select asp-for="@Model.Sector" class="form-control" asp-items="Html.GetEnumSelectList<Industry>()">></select>
+                <span asp-validation-for="@Model.Sector" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

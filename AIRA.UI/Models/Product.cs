@@ -6,7 +6,7 @@ namespace AIRA.UI.Models
 {
     public class Product
     {
-        public int Key { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public decimal? Price { get; set; }
         public DateTime? ReleaseDate { get; set; }
@@ -16,7 +16,7 @@ namespace AIRA.UI.Models
 
     public class ProductCategory
     {
-        public int Key { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public List<Product> Products { get; set; }
     }

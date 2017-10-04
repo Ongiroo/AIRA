@@ -10,5 +10,6 @@ namespace AIRA.UI.Models
         public string Name { get; set; }
         public string Location { get; set; }
         public decimal Phone { get; set; }
+        public string Email { get; set; }
     }
 }

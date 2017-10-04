@@ -7,12 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AIRA.UI.Data;
 using AIRA.UI.Models;
+using Microsoft.AspNetCore.Authorization;
+using AIRA.UI.Models.PortfolioViewModels;
 
 namespace AIRA.UI.Controllers
 {
     public class PortfoliosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private ApplicationDbContext _context = new ApplicationDbContext();
 
         public PortfoliosController(ApplicationDbContext context)
         {
@@ -20,13 +22,34 @@ namespace AIRA.UI.Controllers
         }
 
         // GET: Portfolios
-        public async Task<IActionResult> Index()
-        {
+        public async Task<Microsoft.AspNetCore.Mvc.IActionResult> Index()
+        {     
+                
             return View(await _context.Portfolio.ToListAsync());
         }
+        
+        [HttpGet]
+        [AllowAnonymous]
+        [ActionName("IndexWithSearch")]
+        public IActionResult Index(string searchTerm = null)
+        {
+            var model = _context.Portfolio
+                .OrderByDescending(r => r.Reviews.Average(review => review.Rating))
+                .Where(r => searchTerm == null || r.Name.StartsWith(searchTerm))
+                .Take(10)
+                .Select(r => new PortfolioListViewModel
+                {
+                    Id = r.Id,
+                    Name = r.Name,
+                    ReturnAttribution = r.ReturnAttribution,
+                    RiskAttribution = r.RiskAttribution,
+                    CountOfReviews = r.Reviews.Count()
+                });
 
+            return View(model);
+        }
         // GET: Portfolios/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<Microsoft.AspNetCore.Mvc.IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -54,7 +77,7 @@ namespace AIRA.UI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,ReturnAttribution,RiskAttribution,Title,Sector")] Portfolio portfolio)
+        public async Task<Microsoft.AspNetCore.Mvc.IActionResult> Create([Bind("Id,Name,ReturnAttribution,RiskAttribution,Title,Sector")] Models.Portfolio portfolio)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +89,7 @@ namespace AIRA.UI.Controllers
         }
 
         // GET: Portfolios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<Microsoft.AspNetCore.Mvc.IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -86,7 +109,7 @@ namespace AIRA.UI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ReturnAttribution,RiskAttribution,Title,Sector")] Portfolio portfolio)
+        public async Task<Microsoft.AspNetCore.Mvc.IActionResult> Edit(int id, [Bind("Id,Name,ReturnAttribution,RiskAttribution,Title,Sector")] Models.Portfolio portfolio)
         {
             if (id != portfolio.Id)
             {
@@ -117,7 +140,7 @@ namespace AIRA.UI.Controllers
         }
 
         // GET: Portfolios/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<Microsoft.AspNetCore.Mvc.IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -137,7 +160,7 @@ namespace AIRA.UI.Controllers
         // POST: Portfolios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<Microsoft.AspNetCore.Mvc.IActionResult> DeleteConfirmed(int id)
         {
             var portfolio = await _context.Portfolio.SingleOrDefaultAsync(m => m.Id == id);
             _context.Portfolio.Remove(portfolio);
@@ -148,6 +171,14 @@ namespace AIRA.UI.Controllers
         private bool PortfolioExists(int id)
         {
             return _context.Portfolio.Any(e => e.Id == id);
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _context.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

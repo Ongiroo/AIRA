@@ -15,6 +15,10 @@ namespace AIRA.UI.Data
         {
         }
 
+        public ApplicationDbContext()
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -23,8 +27,10 @@ namespace AIRA.UI.Data
             // Add your customizations after calling base.OnModelCreating(builder);
         }
 
-        public DbSet<AIRA.UI.Models.Contact> Contact { get; set; }
-
-        public DbSet<AIRA.UI.Models.Portfolio> Portfolio { get; set; }
+        public DbSet<Contact> Contact { get; set; }
+        public DbSet<Portfolio> Portfolio { get; set; }
+        public DbSet<PortfolioReview> Reviews { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<News> News { get; set; }
     }
 }

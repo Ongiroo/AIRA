@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> Fundamental Analysis</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/css/3-col-portfolio.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation -->
+    @Html.Partial("_NavBar")
+    <!-- Page Content -->
+    <div class="container">
+        @RenderBody()
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer>
+        <p>&copy; @DateTime.Now.Year Artificial Intelligence Risk Analytics</p>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/lib/jQuery/dist/jquery.min.js"></script>
+    <script src="~/lib/popper.js/dist/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
