@@ -32,5 +32,8 @@ namespace AIRA.UI.Data
         public DbSet<PortfolioReview> Reviews { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<News> News { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
+        public DbSet<AIRA.UI.Models.FixedIncome> FixedIncome { get; set; }
+        public DbSet<AIRA.UI.Models.Cash> Cash { get; set; }
     }
 }

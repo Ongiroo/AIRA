@@ -9,12 +9,13 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 
-namespace AIRA.UI.Data.Migrations
+namespace AIRA.UI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171005163803_Stock")]
+    partial class Stock
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,24 +87,6 @@ namespace AIRA.UI.Data.Migrations
                     b.ToTable("Blogs");
                 });
 
-            modelBuilder.Entity("AIRA.UI.Models.Cash", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CurrencyType");
-
-                    b.Property<DateTime>("Date");
-
-                    b.Property<string>("Name");
-
-                    b.Property<double>("TotalAmount");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Cash");
-                });
-
             modelBuilder.Entity("AIRA.UI.Models.Contact", b =>
                 {
                     b.Property<int>("Id")
@@ -134,36 +117,6 @@ namespace AIRA.UI.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Contact");
-                });
-
-            modelBuilder.Entity("AIRA.UI.Models.FixedIncome", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<double>("Commission");
-
-                    b.Property<double>("Coupon");
-
-                    b.Property<int>("CreditQuality");
-
-                    b.Property<int>("CurrencyType");
-
-                    b.Property<double>("CurrentPrice");
-
-                    b.Property<DateTime>("MaturityDate");
-
-                    b.Property<string>("Name");
-
-                    b.Property<DateTime>("PurchaseDate");
-
-                    b.Property<double>("PurchasePrice");
-
-                    b.Property<int>("Quantity");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("FixedIncome");
                 });
 
             modelBuilder.Entity("AIRA.UI.Models.News", b =>

@@ -1,0 +1,17 @@
+﻿@model BookIndexViewModel
+
+@model InsertBookViewModel
+
+@model BookDetailsViewModel
+@using System.IO
+
+@File.ReadAllText(@"myfile.txt")
+@foreach (var bookViewModel in Model.BookViewModels)
+            {
+    <tr>
+        <td>@bookViewModel.Id</td>
+        <td>@bookViewModel.Author</td>
+        <td>@bookViewModel.Title</td>
+        <td>@Html.ActionLink("Details", "Details", "Books", new { id = bookViewModel.Id }, new { @class = "book-details-link" })</td>
+    </tr>
+}

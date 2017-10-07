@@ -1,0 +1,79 @@
+﻿@model AIRA.UI.Models.FixedIncome
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_PortfolioLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FixedIncome</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchasePrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurchasePrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Commission)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Commission)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditQuality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreditQuality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaturityDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaturityDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Coupon)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Coupon)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrencyType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrencyType)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -12,8 +12,8 @@ using System;
 namespace AIRA.UI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20171003195254_ApplicatinDbContext")]
-    partial class ApplicatinDbContext
+    [Migration("20171005161111_InitialCreation")]
+    partial class InitialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

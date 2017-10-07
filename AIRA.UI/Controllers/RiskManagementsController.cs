@@ -12,5 +12,28 @@ namespace AIRA.UI.Controllers
         {
             return View();
         }
+        public IActionResult MarketRisk()
+        {
+            return View();
+        }
+
+        public IActionResult CollateralManagement()
+        {
+            return View();
+        }
+
+        public IActionResult XVA()
+        {
+            return View();
+        }
+        public IActionResult CounterpartyRisk()
+        {
+            return View();
+        }
+        public IActionResult StressTesting()
+        {
+            return View();
+        }
+
     }
 }

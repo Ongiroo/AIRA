@@ -1,0 +1,77 @@
+﻿@model AIRA.UI.Models.FixedIncome
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_PortfolioLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>FixedIncome</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PurchaseDate" class="control-label"></label>
+                <input asp-for="PurchaseDate" class="form-control" />
+                <span asp-validation-for="PurchaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PurchasePrice" class="control-label"></label>
+                <input asp-for="PurchasePrice" class="form-control" />
+                <span asp-validation-for="PurchasePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentPrice" class="control-label"></label>
+                <input asp-for="CurrentPrice" class="form-control" />
+                <span asp-validation-for="CurrentPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Commission" class="control-label"></label>
+                <input asp-for="Commission" class="form-control" />
+                <span asp-validation-for="Commission" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreditQuality" class="control-label"></label>
+                <select asp-for="@Model.CreditQuality" class="form-control" asp-items="Html.GetEnumSelectList<Rating>()">></select>
+                <span asp-validation-for="CreditQuality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaturityDate" class="control-label"></label>
+                <input asp-for="MaturityDate" class="form-control" />
+                <span asp-validation-for="MaturityDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Coupon" class="control-label"></label>
+                <input asp-for="Coupon" class="form-control" />
+                <span asp-validation-for="Coupon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrencyType" class="control-label"></label>
+                <select asp-for="@Model.CurrencyType" class="form-control" asp-items="Html.GetEnumSelectList<Currency>()">></select>
+                <span asp-validation-for="CurrencyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

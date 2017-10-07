@@ -14,7 +14,7 @@
 //        public double Skew { get; set; }
 //        public double ExcessKurtosis { get; set; }
 //        public double Beta { get; set; }
-//        public double RSquared  { get; set; }
+//        public double RSquared { get; set; }
 
 
 //        public static SecurityReturns goog, gs, msft, spy;

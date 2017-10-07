@@ -1,0 +1,78 @@
+﻿<ul class="nav navbar-top-links navbar-right">
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" asp-controller="RiskManagements" asp-action="Index">
+            <i class="fa fa-bars fa-fw"></i> Create <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-messages">
+            <li><a class="" asp-area="" asp-controller="Portfolios" asp-action="Create"><i class="fa-pencil-square-o fa-fw"></i>New Portfolio</a></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action="">Import</a></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action="">Save a copy</a></li>
+            <li class="divider"></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action="">Portfolio Monitor</a></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action="">Share</a></li>
+            <li class="dropdown-submenu">
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-exchange fa-fw"></i> Export <span class="fa arrow"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="navvarDropdownMenuLink">
+                    <li><i class="fa fa-file-o fa-fw"></i><a href="Export.html">Export Portfolio</a> </li>
+                    <li><i class="fa fa-file-o fa-fw"></i><a href="ExportCSV.html">Export to CSV file</a></li>
+                    <li><i class="fa fa-file-excel-o fa-fw"></i><a href="ExportExcel.html">Export to MS Excel</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /.dropdown-Modify-->
+    </li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" asp-controller="Portfolios" asp-action="Index">
+            <i class="fa fa-tasks fa-fw"></i> Modify <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-messages">            
+            <li><a class="" asp-area="" asp-controller="" asp-action=""><i class="fa-plus-square-o fa-fw"></i>Add Holding(s)</a></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action=""><i class="fa-minus-square-o fa-fw"></i>Edit Holding(s)</a></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action=""><i class="fa-cut fa-fw"></i>Delete Holding(s)</a></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action=""><i class="fa-minus-square-o fa-fw"></i>Divide/Splits</a></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action=""><i class="fa-minus-square-o fa-fw"></i>Rename Portfolio</a></li>
+            <li><a class="" asp-area="" asp-controller="" asp-action=""><i class="fa-power-off fa-fw"></i> Delete Portfolio</a></li>
+        </ul>
+    </li>
+    <!-- /.dropdown-View-->
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" asp-controller="Portfolios" asp-action="Index">
+            <i class="fa fa-table fa-fw"></i> View <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-messages">
+            <li><a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-line-chart fa-fw"></i>My View 1</a></li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-pie-chart fa-fw"></i>My View 2</a>
+            </li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-comments fa-fw"></i>News&Aacute; Opinions</a>
+            </li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-gear fa-fw"></i>Intraday</a>
+            </li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-bar-chart fa-fw"></i>My performance</a>
+            </li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-balance-scale fa-fw"></i>Gain/Loss</a>
+            </li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-briefcase fa-fw"></i>Fundamental</a>
+            </li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-table fa-fw"></i>Insight</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-database fa-fw"></i>Hide Closed Position</a>
+            </li>
+            <li>
+                <a class="" asp-area="" asp-controller="" asp-action=""><i class="fa fa-gear fa-fw"></i>Cost Basis Settings</a>
+            </li>
+        </ul>
+    </li>
+ </ul>
+
+    @*
+        For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+    *@

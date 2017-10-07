@@ -5,9 +5,8 @@
     Layout = "~/Views/Shared/_PortfolioLayout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>Edit Portfolio</h2>
 
-<h4>Portfolio</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -35,10 +34,9 @@
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Sector" class="control-label"></label>>
-                @Html.DropDownListFor(Model => Model.Sector, new SelectList(Enum.GetValues(typeof(Industry))))
-                <span asp-validation-for="Sector" class="text-danger"></span>
-
+                <label asp-for="@Model.Sector" class="control-label"></label>
+                <select asp-for="@Model.Sector" class="form-control" asp-items="Html.GetEnumSelectList<Industry>()">></select>
+                <span asp-validation-for="@Model.Sector" class="text-danger"></span>                   
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

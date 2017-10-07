@@ -11,9 +11,17 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a class="ui-icon-home" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                 <li><a asp-area="" asp-controller="Portfolios" asp-action="Index">Portfolio</a></li>
-                <li><a asp-area="" asp-controller="Sales" asp-action="Index">Contact</a></li>
+                <li class="dropdown"> <a asp-area="" asp-controller="RiskManagements" asp-action="Index">Risk Management</a>
+                    <div class="dropdown-content">
+                        <a asp-controller="RiskManagements" asp-action="MarketRisk">Market Risk</a>
+                        <a asp-controller="RiskManagements" asp-action="CollateralManagement">Collateral Management</a>
+                        <a asp-controller="RiskManagements" asp-action="XVA">X-Value Adjustment (XVA)</a>
+                        <a asp-controller="RiskManagements" asp-action="CounterpartyRisk">Counterparty Risk</a>
+                    </div>
+                </li>
+                <li><a asp-area=" " asp-controller="Sales" asp-action="Index">Contact</a></li>
                 <li><a asp-area="" asp-controller="Support" asp-action="Index">Support</a></li>
                 <li><a asp-area="" asp-controller="Home" asp-action="News">News</a></li>
                 <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
